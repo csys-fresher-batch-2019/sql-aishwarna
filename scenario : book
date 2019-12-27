@@ -39,6 +39,10 @@ constraint order_id_pk primary key(order_id),constraint book_id_fk foreign key(b
  
  
  
+ 
+ 
+ 
+ 
  create table order_item(item_id number not null,
  order_id_pl number not null,
  book_id  number not null,
@@ -64,6 +68,25 @@ constraint order_id_pk primary key(order_id),constraint book_id_fk foreign key(b
  insert into stocks(stock_id,book_id,quantity)values(1,101,2);
  
  insert into stocks(stock_id,book_id,quantity)values(2,102,3);
+ 
+ 
+ 
+ 
+ select book_name,(select sum(quantity)from order_item where book_id =b.book_id)from book b;
+ 
+ 
+ select book_name,(select sum(quantity) from stocks where book_id=b.book_id)from book b;
+ 
+ 
+ 
+ select book_name,
+ (
+(select book_name,(select sum(quantity) from stocks where book_id=b.book_id)-
+ (select book_name,(select sum(quantity)from order_item where book_id =b.book_id)
+ ) 
+ from book b;
+ 
+ 
  
  
  
