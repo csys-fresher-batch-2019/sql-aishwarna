@@ -1,0 +1,81 @@
+create table book(book_id number not null,book_name varchar2(100) not null,author_name varchar2(100) not null,price number not null,
+publisher varchar2(100) not null,version number,categories varchar2(100) not null,active_status number default 1,
+constraint book_id_pk primary key(book_id),constraint special_uq unique(book_name,author_name,version),
+constraint price_ch check(price>=0));
+
+
+
+ insert into book(book_id,book_name,author_name,price,publisher,version,categories,active_status)values(101,'sherlock_homes',
+ 'steeves',1000,'ravi',1,'thrilling',1);
+ 
+
+insert into book(book_id,book_name,author_name,price,publisher,version,categories,active_status)values(102,'coper_field',
+ 'john',2000,'rajesh',1,'commercial',1);
+ 
+ 
+ 
+ insert into book(book_id,book_name,author_name,price,publisher,version,categories,active_status)values(103,'brook_field',
+ 'james',3000,'rahman',1,'comical',1);
+ 
+ 
+ create table  orders(order_id number,user_name varchar2(100) not null,book_id number not null, ordered_date timestamp not null,delivered_date 
+timestamp not null,total_amount number not null,quantity number not null,status varchar2(100) not null,comments varchar2(100),
+constraint order_id_pk primary key(order_id),constraint book_id_fk foreign key(book_id) references
+ book(book_id),constraint family_uq unique(user_name,book_id,ordered_date),constraint total_amount_am check(total_amount>=0),
+ constraint quantity_qm check(quantity>=1));
+ 
+ 
+ 
+ insert into orders(order_id,user_name,book_id,ordered_date,delivered_date,total_amount,quantity,status,comments)values(1234,'priya',101,
+ timestamp '2019-12-10 23:16:05',timestamp '2020-01-02 11:13:05',1000,1,'delivered','welcome');
+ 
+ 
+ 
+ insert into orders(order_id,user_name,book_id,ordered_date,delivered_date,total_amount,quantity,status,comments)values(1993,'charu',102,
+ timestamp '2019-12-11 22:16:05',timestamp '2020-01-05 11:13:05',2000,1,'not available','sorrymam');
+ 
+ 
+ select count(delivered_date)as sales from orders where status='delivered';
+ 
+ 
+ 
+ create table order_item(item_id number not null,
+ order_id_pl number not null,
+ book_id  number not null,
+ quantity number not null,
+ status varchar2(100),
+ constraints order_id_fk foreign key(order_id_pl) references orders(order_id),
+ constraint bk_id_fk
+ foreign key(book_id)references book(book_id), 
+ constraint item_id_pk primary key(item_id));
+ 
+ insert into order_item(item_id,order_id_pl,book_id,quantity,status)values(1,1234,101,2,'ordereed');
+ 
+ 
+ insert into order_item(item_id,order_id_pl,book_id,quantity,status)values(2,1993,102,4,'ordered');
+ 
+ 
+ 
+ create table stocks(stock_id number not null,book_id number not null,
+ quantity number not null,
+ constraint b_id_fk foreign key(book_id) references book(book_id));
+ 
+ 
+ insert into stocks(stock_id,book_id,quantity)values(1,101,2);
+ 
+ insert into stocks(stock_id,book_id,quantity)values(2,102,3);
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
