@@ -35,6 +35,11 @@ constraint order_id_pk primary key(order_id),constraint book_id_fk foreign key(b
  timestamp '2019-12-11 22:16:05',timestamp '2020-01-05 11:13:05',2000,1,'not available','sorrymam');
  
  
+ insert into orders(order_id,user_name,book_id,ordered_date,delivered_date,total_amount,quantity,status,comments)values(1997,'swathi',103,
+ timestamp '2019-12-1 12:16:05',timestamp '2020-01-05 1:13:05',3000,1,' available','welcome');
+ 
+ 
+ 
  select count(delivered_date)as sales from orders where status='delivered';
  
  
@@ -85,6 +90,24 @@ constraint order_id_pk primary key(order_id),constraint book_id_fk foreign key(b
    (select sum(quantity)from order_item where book_id =b.book_id)
  ) as available_stocks
  from book b;
+ 
+ 
+ 
+ 
+ 30-12-19
+ continueing same table with join conceps 
+ 
+ 
+ // inner join //
+  select  book_name,user_name from book b inner join orders o on b.book_id=o.book_id;
+ 
+ //  outer join//
+ select * from book b  full outer join orders o on b.book_id=o.book_id;
+ 
+ 
+ 
+ 
+ 
  
  
  
