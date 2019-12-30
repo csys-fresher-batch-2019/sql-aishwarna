@@ -61,6 +61,7 @@ constraint order_id_pk primary key(order_id),constraint book_id_fk foreign key(b
  insert into order_item(item_id,order_id_pl,book_id,quantity,status)values(1,1234,101,2,'ordereed');
  
  
+ 
  insert into order_item(item_id,order_id_pl,book_id,quantity,status)values(2,1993,102,4,'ordered');
  
  
@@ -105,6 +106,16 @@ constraint order_id_pk primary key(order_id),constraint book_id_fk foreign key(b
  select * from book b  full outer join orders o on b.book_id=o.book_id;
  
  
+ 
+ //cross join//
+ select * from book,orders;
+ 
+ 
+  // left outer join //
+ select author_name ,ordered_date from book b left outer join orders o on b.book_id=o.book_id;
+ 
+ 
+ select * from book b left outer join orders o on b.book_id=o.book_id;
  
  
  
