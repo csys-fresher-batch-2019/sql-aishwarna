@@ -120,7 +120,8 @@ constraint order_id_pk primary key(order_id),constraint book_id_fk foreign key(b
  
  
  
- 
+//  self join 
+select t1.author_name,t2.publisher from book on t1.book_id=t2.book_id;
  
  
  
