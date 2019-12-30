@@ -5,7 +5,7 @@
 
 ## Feature 1- List all the trains 
 ```sql
-create table trains(train_id number not null,train_name varchar2(100) not null,birth_type varchar2(100) not null,
+create table trains(train_id number,train_name varchar2(100) not null,birth_type varchar2(100) not null,
 ticket_vaccency varchar2(100)
 not null,constraint train_id_pk primary key(train_id));
 ```
