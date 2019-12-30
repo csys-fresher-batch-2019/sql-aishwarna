@@ -14,5 +14,21 @@ constraint train_id_pk primary key(train_id)),constraint birth_type_ch check(bir
 insert into trains(train_id,train_name)values(1,'kovai express','chennai','kovai',sitting',to_date('2019-dec-31 17:30,'YYYY-MM-DD HH24:MI');
 
 
+
 select * from trains;
 ```
+
+## Feature 2-passenger details 
+```sql
+ create table passenger(passenger_id number,
+  passenger_name varchar2(100) not null,
+  train_id number not null,
+  contact_number number not null,
+  adhar_number number not null unique,
+  constraint train_id_fk foreign key(train_id) references trains,
+  constraint passenger_id_pk primary key(passenger_id)
+  );
+  ```
+  ## Query 
+  ```sql
+  
