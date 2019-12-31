@@ -1,6 +1,7 @@
 #table design for railway reservation management
 ##table 1
 ->trains
+
 | train_id | train_name      | journey_starts | journey_ends | birth_type | status        |
 |----------|-----------------|----------------|--------------|------------|---------------|
 | 1234     | kovai_express   | chennai        | coimbatore   | sitting    | Available     |
