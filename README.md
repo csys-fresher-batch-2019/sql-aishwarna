@@ -74,7 +74,11 @@ select * from trains;
  
  select * from passenger;
   ```
-   
+| passenger_id | passenger_name | train_id | gender | contact_number | adhar_number |
+|--------------|----------------|----------|--------|----------------|--------------|
+| 1111         | chandra        | 1234     | female | 9937808765     | 1000549873   |
+| 2222         | kailasam       | 5678     | male   | 9600928765     | 100065398822 |
+| 3333         | aishwaryaa     | 3245     | female | 9003711907     | 188770487634 |
  
   
   
