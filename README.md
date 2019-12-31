@@ -72,15 +72,21 @@ select * from trains;
   
   ## Feature 3----booking details 
   
-   create table booking_details(train_id number not null,
-  passenger_id number not null,
-  arrival_time date not null,
-  depature_time date not null,
-  compartment_no varchar2(10)not null,
-  coach_type varchar2(20) not null,
-  birth_type varchar2(20) not null,
-  constraint passenger_id_fk foreign key(passenger_id) references passenger(passenger_id),
-  constraint train_id_fk foreign key(train_id) references trains(train_id),
+ 
+create table booking_detail(
+tr_id number not null, 
+pn_id number not null, 
+arrival_time date not null,
+depature_time date not null,
+compartment_no varchar2(10)not null,
+coach_type varchar2(20) not null,
+birth_type varchar2(20) not null,
+constraint pn_id_fk foreign key(pn_id) references passenger(passenger_id), 
+constraint tr_id_fk foreign key(tr_id) references trains(train_id)
+);
+
+
+
   );
   
   
