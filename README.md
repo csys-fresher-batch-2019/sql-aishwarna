@@ -39,13 +39,17 @@ select * from trains;
 
 ## Feature 2-passenger details 
 ```sql
-  create table passenger(passenger_id number,
+  create table passenger
+(passenger_id number,
  passenger_name varchar2(100) not null,
  train_id number not null,
+ gender varchar2(10) not null,
  contact_number number not null,
  adhar_number number not null unique,
  constraint train_id_fk foreign key(train_id) references trains(train_id),
- constraint passenger_id_pk primary key(passenger_id)
+ constraint passenger_id_pk primary key(passenger_id),
+ constraint gender_ch check(gender in('male','female'))
+ );
   ```
   ## Query 
   ```sql
