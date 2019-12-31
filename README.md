@@ -53,8 +53,9 @@ select * from trains;
   ```
   ## Query 
   ```sql
-  insert into passenger(passenger_id,passenger_name,train_id,contact_number,adhar_number)
- values(1111,'chandra',1234,9945603786,12987465094678);
+ insert into passenger(passenger_id,passenger_name,train_id,gender,contact_number,adhar_number)
+ values(1111,'chandra',1234,'female',9937808765,1000549873);
+  
  
   
   
