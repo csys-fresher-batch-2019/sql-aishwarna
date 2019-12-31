@@ -28,6 +28,10 @@ status)values(1234,'kovai_express','chennai','coimbatore','sitting','Available')
 insert into trains(train_id,train_name,journey_starts,journey_ends,birth_type,
 status)values(5678,'yercard_express','erode','chennai','sleeper','Waiting_List');
 
+insert into trains(train_id,train_name,journey_starts,journey_ends,birth_type,
+status)values(3245,'pandian_express','trichy','chennai','ac_sleeper','Not_Available');
+
+
 
 
 select * from trains;
