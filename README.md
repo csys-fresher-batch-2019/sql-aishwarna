@@ -55,11 +55,12 @@ select * from trains;
   ```sql
  insert into passenger(passenger_id,passenger_name,train_id,gender,contact_number,adhar_number)
  values(1111,'chandra',1234,'female',9937808765,1000549873);
-  
  
-  
-  
-  
+ 
+  insert into passenger(passenger_id,passenger_name,train_id,gender,contact_number,adhar_number)
+ values(2222,'kailasam',5678,'male',9600928765,100065398822);
+   
+ 
   
   
   ## Feature 3----booking details 
