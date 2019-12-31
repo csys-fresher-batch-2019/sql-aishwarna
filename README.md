@@ -21,7 +21,12 @@ constraint status_ch check(status in('Available','Not_Available','Waiting_List')
 
 ###Query
 ```sql
-insert into trains(train_id,train_name)values(1,'kovai express','chennai','kovai',sitting',to_date('2019-dec-31 17:30,'YYYY-MM-DD HH24:MI');
+insert into trains(train_id,train_name,journey_starts,journey_ends,birth_type,
+status)values(1234,'kovai_express','chennai','coimbatore','sitting','Available');
+
+
+insert into trains(train_id,train_name,journey_starts,journey_ends,birth_type,
+status)values(5678,'yercard_express','erode','chennai','sleeper','Waiting_List');
 
 
 
