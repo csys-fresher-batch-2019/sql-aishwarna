@@ -10,23 +10,31 @@ train_id number,
 train_name varchar2(100) not null unique ,
 journey_starts varchar2(100) not null,
 journey_ends varchar2(100) not null,
+arrival_time timestamp not null,
+depature_time timestamp not null,
 birth_type varchar2(100) not null,
-status varchar2(100) not null,
+
 constraint train_id_pk primary key(train_id),
 constraint birth_type_ch check(birth_type in('sleeper','sitting','ac_sleeper','ac_sitting')),
-constraint status_ch check(status in('Available','Not_Available','Waiting_List'))
 );
 
 ```
 
 ###Query
 ```sql
-insert into trains(train_id,train_name,journey_starts,journey_ends,birth_type,
-status)values(1234,'kovai_express','chennai','coimbatore','sitting','Available');
+insert into trains(train_id,
+train_name,
+journey_starts,
+journey_ends,
+arrival_time,
+depature_time,
+birth_type)
+values(1234,'kovai_express','chennai','coimbatore',to_timestamp('1-jan-2020 07:10:34','DD-Mon-YYYY HH24:MI:SS'),to_timestamp('31-dec-2019 23:13:24','DD-Mon-YYYY HH24:MI:SS'),'sitting');
 
 
 insert into trains(train_id,train_name,journey_starts,journey_ends,birth_type,
-status)values(5678,'yercard_express','erode','chennai','sleeper','Waiting_List');
+status)values(5678,'yercard_express','erode','chennai','to_timestamp('7-jan-2020 09:45:10','DD-Mon-YYYY HH24:MI:SS'),
+sleeper',);
 
 insert into trains(train_id,train_name,journey_starts,journey_ends,birth_type,
 status)values(3245,'pandian_express','trichy','chennai','ac_sleeper','Not_Available');
@@ -88,8 +96,8 @@ select * from trains;
 create table booking_detail(
 tr_id number not null, 
 pn_id number not null, 
-arrival_time date not null,
-depature_time date not null,
+arrival_time timestamp not null,
+depature_time timestamp not null,
 compartment_no varchar2(10)not null,
 coach_type varchar2(20) not null,
 birth_type varchar2(20) not null,
