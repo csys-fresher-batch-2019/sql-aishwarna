@@ -59,6 +59,13 @@ select * from trains;
  
   insert into passenger(passenger_id,passenger_name,train_id,gender,contact_number,adhar_number)
  values(2222,'kailasam',5678,'male',9600928765,100065398822);
+ 
+ 
+ insert into passenger(passenger_id,passenger_name,train_id,gender,contact_number,adhar_number)
+ values(3333,'aishwaryaa',3245,'female',9003711907,188770487634);
+ 
+ select * from passenger;
+  ```
    
  
   
