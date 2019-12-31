@@ -37,6 +37,14 @@ status)values(3245,'pandian_express','trichy','chennai','ac_sleeper','Not_Availa
 select * from trains;
 ```
 
+
+| train_id | train_name      | journey_starts | journey_ends | birth_type | status        |
+|----------|-----------------|----------------|--------------|------------|---------------|
+| 1234     | kovai_express   | chennai        | coimbatore   | sitting    | Available     |
+| 5678     | yercard_express | erode          | chennai      | sleeper    | Waiting_List  |
+| 3245     | pandian_express | trichy         | chennai      | ac_sleeper | Not_Available |
+
+
 ## Feature 2-passenger details 
 ```sql
   create table passenger
