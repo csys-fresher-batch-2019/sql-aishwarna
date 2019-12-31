@@ -72,7 +72,7 @@ select * from trains;
   
   ## Feature 3----booking details 
   
- 
+ ```sql
 create table booking_detail(
 tr_id number not null, 
 pn_id number not null, 
@@ -84,6 +84,7 @@ birth_type varchar2(20) not null,
 constraint pn_id_fk foreign key(pn_id) references passenger(passenger_id), 
 constraint tr_id_fk foreign key(tr_id) references trains(train_id)
 );
+```
 
 
 
