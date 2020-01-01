@@ -15,7 +15,7 @@ depature_time timestamp not null,
 birth_type varchar2(100) not null,
 
 constraint train_id_pk primary key(train_id),
-constraint birth_type_ch check(birth_type in('sleeper','sitting','ac_sleeper','ac_sitting')),
+constraint birth_type_ch check(birth_type in('sleeper','sitting','ac_sleeper','ac_sitting'))
 );
 
 ```
