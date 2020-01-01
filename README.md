@@ -134,11 +134,11 @@ constraint tr_id_fk foreign key(tr_id) references trains(train_id)
  
  insert into booking_detail(tr_id,pn_id,compartment_no,coach_type,
 birth_type)values(1234,1111,
-'S-3','AC','sitting');
+'S-3','NON_AC','sitting');
 
 insert into booking_detail(tr_id,pn_id,compartment_no,coach_type,
 birth_type)values(5678,2222,
-'S-5','AC','sleeper');
+'S-5','NON_AC','sleeper');
 
 insert into booking_detail(tr_id,pn_id,compartment_no,coach_type,
 birth_type)values(3245,3333,
@@ -147,6 +147,11 @@ birth_type)values(3245,3333,
 select * from booking_detail;
 ```
   
+| TR_ID | PN_ID | COMPARTMENT_NO | COACH_TYPE | BIRTH_TYPE |
+|-------|-------|----------------|------------|------------|
+| 1234  | 1111  | S-3            | NON_AC     | sitting    |
+| 5678  | 2222  | S-5            | NON_AC     | sleeper    |
+| 3245  | 3333  | S-1            | AC         | ac_sleeper |
   
   
   
