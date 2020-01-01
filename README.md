@@ -117,8 +117,6 @@ select * from trains;
 create table booking_detail(
 tr_id number not null, 
 pn_id number not null, 
-arrival_time timestamp not null,
-depature_time timestamp not null,
 compartment_no varchar2(10)not null,
 coach_type varchar2(20) not null,
 birth_type varchar2(20) not null,
@@ -133,10 +131,16 @@ constraint tr_id_fk foreign key(tr_id) references trains(train_id)
   
   ## query
   ```sql
-  insert into booking_detail(tr_id,pn_id,arrival_time,depature_time,compartment_no,coach_type,
-birth_type)values(1234,1111,to_timestamp('1-jan-2020 07:10:34','DD-Mon-YYYY HH24:MI:SS'),
-to_timestamp('31-dec-2019 23:13:24','DD-Mon-YYYY HH24:MI:SS'),
+  insert into booking_detail(tr_id,pn_id,compartment_no,coach_type,
+birth_type)values(1234,1111,
 'S-3','AC','sleeper');
+
+
+
+ insert into booking_detail(tr_id,pn_id,compartment_no,coach_type,
+birth_type)values(1234,1111,
+'S-3','AC','sleeper');
+
 ```
   
   
