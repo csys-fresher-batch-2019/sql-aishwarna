@@ -131,17 +131,20 @@ constraint tr_id_fk foreign key(tr_id) references trains(train_id)
   
   ## query
   ```sql
-  insert into booking_detail(tr_id,pn_id,compartment_no,coach_type,
+ 
+ insert into booking_detail(tr_id,pn_id,compartment_no,coach_type,
 birth_type)values(1234,1111,
-'S-3','AC','sleeper');
+'S-3','AC','sitting');
 
-
-
-  insert into booking_detail(tr_id,pn_id,compartment_no,coach_type,
+insert into booking_detail(tr_id,pn_id,compartment_no,coach_type,
 birth_type)values(5678,2222,
-'S-1','AC','sitting');
+'S-5','AC','sleeper');
 
-
+insert into booking_detail(tr_id,pn_id,compartment_no,coach_type,
+birth_type)values(3245,3333,
+'S-1','AC','ac_sleeper');
+ 
+select * from booking_detail;
 ```
   
   
