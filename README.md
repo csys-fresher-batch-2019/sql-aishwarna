@@ -34,10 +34,10 @@ values(1234,'kovai_express','chennai','coimbatore',to_timestamp('1-jan-2020 07:1
 
 insert into trains(train_id,train_name,journey_starts,journey_ends,birth_type,
 status)values(5678,'yercard_express','erode','chennai','to_timestamp('7-jan-2020 09:45:10','DD-Mon-YYYY HH24:MI:SS'),
-sleeper',);
+'sleeper');
 
 insert into trains(train_id,train_name,journey_starts,journey_ends,birth_type,
-status)values(3245,'pandian_express','trichy','chennai','ac_sleeper','Not_Available');
+status)values(3245,'pandian_express','trichy','chennai',to_timestamp('10-jan-2020 06:45:10,'DD-Mon-YYYY HH24:MI:SS'),'ac_sleeper');
 
 
 
