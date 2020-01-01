@@ -67,13 +67,11 @@ to_timestamp('1-dec-2019 22:13:24','DD-Mon-YYYY HH24:MI:SS'),'ac_sleeper');
 
 select * from trains;
 ```
-
-
-| train_id | train_name      | journey_starts | journey_ends | birth_type | status        |
-|----------|-----------------|----------------|--------------|------------|---------------|
-| 1234     | kovai_express   | chennai        | coimbatore   | sitting    | Available     |
-| 5678     | yercard_express | erode          | chennai      | sleeper    | Waiting_List  |
-| 3245     | pandian_express | trichy         | chennai      | ac_sleeper | Not_Available |
+| train_id | train_name      | journey_starts | journey_ends | arrival_time                  | depature_time                | birth_type |
+|----------|-----------------|----------------|--------------|-------------------------------|------------------------------|-----------|
+| 3245     | pandian_express | trichy         | chennai      | 02-JAN-20 09.10.34.000000 AM  | 01-DEC-19 10.13.24.000000 PM | ac_sleeper |
+| 1234     | kovai_express   | chennai        | coimbatore   | 01-JAN-20 07.10.34.000000 AM  | 31-DEC-19 11.13.24.000000 PM | sitting    |
+| 5678     | yercard_express | erode          | chennai      | 01-JAN-20 05.10.34.000000 AM  | 31-DEC-19 09.13.24.000000 PM | sleeper    
 
 
 ## Feature 2-passenger details 
