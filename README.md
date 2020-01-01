@@ -155,6 +155,16 @@ select * from booking_detail;
   
   
   
+  ##Feature 4--viewing list of all train names
   
+  ```sql
+  select train_name from trains;
   
+  ```
+  
+  | train_name  |
+|-----------------|
+| kovai_express   |
+| pandian_express |
+| yercard_express |
   
