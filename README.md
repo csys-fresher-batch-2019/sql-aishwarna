@@ -137,9 +137,10 @@ birth_type)values(1234,1111,
 
 
 
- insert into booking_detail(tr_id,pn_id,compartment_no,coach_type,
-birth_type)values(1234,1111,
-'S-3','AC','sleeper');
+  insert into booking_detail(tr_id,pn_id,compartment_no,coach_type,
+birth_type)values(5678,2222,
+'S-1','AC','sitting');
+
 
 ```
   
