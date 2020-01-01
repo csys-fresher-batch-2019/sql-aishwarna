@@ -32,12 +32,21 @@ birth_type)
 values(1234,'kovai_express','chennai','coimbatore',to_timestamp('1-jan-2020 07:10:34','DD-Mon-YYYY HH24:MI:SS'),to_timestamp('31-dec-2019 23:13:24','DD-Mon-YYYY HH24:MI:SS'),'sitting');
 
 
-insert into trains(train_id,train_name,journey_starts,journey_ends,birth_type,
-status)values(5678,'yercard_express','erode','chennai','to_timestamp('7-jan-2020 09:45:10','DD-Mon-YYYY HH24:MI:SS'),
-'sleeper');
+insert into trains
+(train_id,
+train_name,
+journey_starts,
+journey_ends,
+arrival_time,
+depature_time,
+birth_type)
+values(5678,'yercard_express',
+'erode',
+'chennai',
+to_timestamp('1-jan-2020 05:10:34','DD-Mon-YYYY HH24:MI:SS'),
+to_timestamp('31-dec-2019 21:13:24','DD-Mon-YYYY HH24:MI:SS'),'sleeper');
 
-insert into trains(train_id,train_name,journey_starts,journey_ends,birth_type,
-status)values(3245,'pandian_express','trichy','chennai',to_timestamp('10-jan-2020 06:45:10,'DD-Mon-YYYY HH24:MI:SS'),'ac_sleeper');
+
 
 
 
