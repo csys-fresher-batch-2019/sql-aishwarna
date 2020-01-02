@@ -155,7 +155,7 @@ select * from booking_detail;
   
   
   
-  ##Feature 4--viewing list of all train names
+  ###feature ---4 viewing all train names
   
   ```sql
   select train_name from trains;
