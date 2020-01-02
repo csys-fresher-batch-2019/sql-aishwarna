@@ -180,6 +180,20 @@ select passenger_name,(select train_name from trains where trains.train_id=passe
 | chandra        | kovai_express   |
 | kailasam       | yercard_express |
 | aishwaryaa     | pandian_express |
+
+
+
+##Feature 6----->By giving name of the train we can able to see where the train starts and ends and finally displaying it in ascending order
+
+```sql
+select train_name,journey_starts,journey_ends from trains order by train_name;
+  ```
+  
+| TRAIN_NAME      | JOURNEY_STARTS | JOURNEY_ENDS |
+|-----------------|----------------|--------------|
+| kovai_express   | chennai        | coimbatore   |
+| pandian_express | trichy         | chennai      |
+| yercard_express | erode          | chennai      |
   
 
 
