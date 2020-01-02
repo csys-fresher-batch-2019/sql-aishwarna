@@ -155,7 +155,7 @@ select * from booking_detail;
   
   
   
-  ###feature ---4 viewing all train names
+  ### feature ---4 viewing all train names
   
   ```sql
   select train_name from trains;
@@ -169,7 +169,7 @@ select * from booking_detail;
 | yercard_express |
 
 
-##Feature 5---we can view the passenger name and their train name 
+## Feature 5---we can view the passenger name and their train name 
 
 ```sql
 select passenger_name,(select train_name from trains where trains.train_id=passenger.train_id) from passenger where trains.train_id=passenger.train_id;
@@ -183,7 +183,7 @@ select passenger_name,(select train_name from trains where trains.train_id=passe
 
 
 
-##Feature 6----->By giving name of the train we can able to see where the train starts and ends and finally displaying it in ascending order
+## Feature 6----->By giving name of the train we can able to see where the train starts and ends and finally displaying it in ascending order
 
 ```sql
 select train_name,journey_starts,journey_ends from trains order by train_name;
@@ -196,7 +196,7 @@ select train_name,journey_starts,journey_ends from trains order by train_name;
 | yercard_express | erode          | chennai      |
 
 
-##feature 7---->count of trains moving from chennai
+## feature 7---->count of trains moving from chennai
 ```sql
 select count(journey_starts) from trains where journey_starts='chennai';
 ```
@@ -215,7 +215,7 @@ select count(journey_starts) from trains where journey_starts='chennai';
 | aishwaryaa     | pandian_express |
 
 
-##feature 9------> altering the booking_table column and adding the column to know the status of payment_status
+## feature 9------> altering the booking_table column and adding the column to know the status of payment_status
 ```sql
 alter table booking_detail add payment_status varchar2(100);
 
@@ -232,7 +232,7 @@ update booking_detail set payment_status='paid' where tr_id=3245;
 | 3245  | 3333  | S-1            | AC         | ac_sleeper | paid           |
 
 
-###FEATURE -10---> Viewing passenger names who made payment
+### FEATURE -10---> Viewing passenger names who made payment
 
 ```sql
 select p.passenger_name,c.payment_status from passenger p ,booking_detail c where p.train_id=c.tr_id and c.payment_status='paid';
