@@ -3,7 +3,7 @@
 ## Features
 .User can able to view all the trains 
 
-## Feature 1- List all the trains 
+## Feature 1- viewing train details
 ```sql
 create table trains(
 train_id number,
