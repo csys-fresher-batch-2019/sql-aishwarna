@@ -204,7 +204,7 @@ select count(journey_starts) from trains where journey_starts='chennai';
 |-----------------------|
 | 1                     |
 
- ## Feature 8----> displaying the feamale passengers with their train name
+ ## Feature 8----> displaying the female passengers with their train name
  ```sql
  select p.passenger_name,t.train_name from passenger p ,trains t where p.train_id=t.train_id and p.gender='female';
 ```
