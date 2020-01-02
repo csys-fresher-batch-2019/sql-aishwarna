@@ -215,5 +215,22 @@ select count(journey_starts) from trains where journey_starts='chennai';
 | aishwaryaa     | pandian_express |
 
 
+##feature 9------> altering the booking_table column and adding the column to know the status of payment_status
+```sql
+alter table booking_detail add payment_status varchar2(100);
+
+update  booking_detail set payment_status='paid' where tr_id=1234;
+update  booking_detail set payment_status='not_paid' where tr_id=5678;
+update booking_detail set payment_status='paid' where tr_id=3245;
+  select * from booking_detail;
+  ```
+  
+| TR_ID | PN_ID | COMPARTMENT_NO | COACH_TYPE | BIRTH_TYPE | PAYMENT_STATUS |
+|-------|-------|----------------|------------|------------|----------------|
+| 1234  | 1111  | S-3            | NON_AC     | sitting    | paid           |
+| 5678  | 2222  | S-5            | NON_AC     | sleeper    | not_paid       |
+| 3245  | 3333  | S-1            | AC         | ac_sleeper | paid           |
+
+
 
   
