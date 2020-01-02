@@ -205,7 +205,7 @@ select count(journey_starts) from trains where journey_starts='chennai';
 | 1                     |
 
  ## Feature 8----> displaying the female passengers with their train name
- ```sql
+ ```sql(SUB QUERY)
  select p.passenger_name,t.train_name from passenger p ,trains t where p.train_id=t.train_id and p.gender='female';
 ```
 
@@ -231,6 +231,17 @@ update booking_detail set payment_status='paid' where tr_id=3245;
 | 5678  | 2222  | S-5            | NON_AC     | sleeper    | not_paid       |
 | 3245  | 3333  | S-1            | AC         | ac_sleeper | paid           |
 
+
+###FEATURE -10---> Viewing passenger names who made payment
+
+```sql
+select p.passenger_name,c.payment_status from passenger p ,booking_detail c where p.train_id=c.tr_id and c.payment_status='paid';
+ 
+```
+| PASSENGER_NAME | PAYMENT_STATUS |
+|----------------|----------------|
+| chandra        | paid           |
+| aishwaryaa     | paid           |
 
 
   
