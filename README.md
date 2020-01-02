@@ -167,4 +167,20 @@ select * from booking_detail;
 | kovai_express   |
 | pandian_express |
 | yercard_express |
+
+
+##Feature 5---we can view the passenger name and their name name 
+
+```sql
+select passenger_name,(select train_name from trains where trains.train_id=passenger.train_id) from passenger where trains.train_id=passenger.train_id;
+```
+
+| PASSENGER_NAME | TRAIN_NAME      |
+|----------------|-----------------|
+| chandra        | kovai_express   |
+| kailasam       | yercard_express |
+| aishwaryaa     | pandian_express |
+  
+
+
   
