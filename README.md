@@ -194,6 +194,16 @@ select train_name,journey_starts,journey_ends from trains order by train_name;
 | kovai_express   | chennai        | coimbatore   |
 | pandian_express | trichy         | chennai      |
 | yercard_express | erode          | chennai      |
+
+
+##feature 7---->count of trains moving from chennai
+```sql
+select count(journey_starts) from trains where journey_starts='chennai';
+```
+| COUNT(JOURNEY_STARTS) |
+|-----------------------|
+| 1                     |
+
   
 
 
