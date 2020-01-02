@@ -169,7 +169,7 @@ select * from booking_detail;
 | yercard_express |
 
 
-##Feature 5---we can view the passenger name and their name name 
+##Feature 5---we can view the passenger name and their train name 
 
 ```sql
 select passenger_name,(select train_name from trains where trains.train_id=passenger.train_id) from passenger where trains.train_id=passenger.train_id;
