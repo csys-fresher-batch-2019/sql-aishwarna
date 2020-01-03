@@ -244,7 +244,6 @@ select p.passenger_name,c.payment_status from passenger p ,booking_detail c wher
 | aishwaryaa     | paid           |
 
 
-## Feature-11----> 
 
 
 
